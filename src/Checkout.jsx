@@ -1,5 +1,5 @@
-import React from 'react';
-import './Checkout.css';
+import React from "react";
+import "./Checkout.css";
 
 const Checkout = () => {
   return (
@@ -50,7 +50,9 @@ const Checkout = () => {
               <p>Credit Card</p>
             </div>
           </div>
-          <button type="submit" className="checkout-button">Place Order</button>
+          <button type="submit" className="checkout-button">
+            Place Order
+          </button>
         </form>
       </div>
     </div>

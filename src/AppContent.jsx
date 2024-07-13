@@ -1,13 +1,13 @@
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-import './App.css';
-import AboutUs from './AboutUs';
+import React from "react";
+import { useNavigate } from "react-router-dom";
+import "./App.css";
+import AboutUs from "./AboutUs";
 
 const AppContent = () => {
   const navigate = useNavigate();
 
   const handleGetStartedClick = () => {
-    navigate('/products');
+    navigate("/products");
   };
 
   return (
@@ -19,7 +19,10 @@ const AppContent = () => {
             <h1>Welcome To Paradise Nursery</h1>
             <div className="divider"></div>
             <p>Where Green Meets Serenity</p>
-            <button className="get-started-button" onClick={handleGetStartedClick}>
+            <button
+              className="get-started-button"
+              onClick={handleGetStartedClick}
+            >
               Get Started
             </button>
           </div>
