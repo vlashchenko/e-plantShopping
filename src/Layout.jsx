@@ -8,49 +8,33 @@ const Layout = ({ children }) => {
   const cartItems = useSelector((state) => state.cart.items);
   const totalItemsInCart = cartItems.reduce((total, item) => total + item.quantity, 0);
 
-  const styleObj = {
-    backgroundColor: "#4CAF50",
-    color: "#fff",
-    padding: "15px",
-    display: "flex",
-    justifyContent: "space-between",
-    alignItems: "center",
-    fontSize: "20px",
-  };
-
-  const styleA = {
-    color: "white",
-    fontSize: "30px",
-    textDecoration: "none",
-  };
-
   return (
+      <div className="main-content">
     <div className="layout">
-      <div className="navbar" style={styleObj}>
+      <div className="navbar">
         <div className="luxury">
-          <img
-            src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
-            alt=""
-            style={{ height: '70px', width: '70px', borderRadius: '50%' }}
-          />
-          <Link to="/" className="tag_home_link" style={{ textDecoration: 'none', color: 'white' }}>
-            <h3>Paradise Nursery</h3>
-            <i>Where Green Meets Serenity</i>
+          <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', color: 'white' }}>
+            <img
+              src="https://cdn.pixabay.com/photo/2020/08/05/13/12/eco-5465432_1280.png"
+              alt=""
+            />
+            <div className="tag_home_link">
+              <h3>Paradise Nursery</h3>
+              <i>Where Green Meets Serenity</i>
+            </div>
           </Link>
         </div>
-        <div className="headline" style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', fontSize: '20px' }}>
-          <Link to="/" style={styleA}>
+        <div className="headline">
+          <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
             Plants
           </Link>
         </div>
-        <div style={{ position: 'relative' }}>
-          <Link to="/cart" style={styleA}>
-            <h1 className="cart">
+        <div className="cart-container">
+          <Link to="/cart" style={{ color: 'white', textDecoration: 'none' }}>
+            <div className="cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 256 256"
-                height="68"
-                width="68"
               >
                 <rect width="156" height="156" fill="none"></rect>
                 <circle cx="80" cy="216" r="12"></circle>
@@ -64,18 +48,19 @@ const Layout = ({ children }) => {
                   strokeWidth="2"
                 ></path>
               </svg>
-            </h1>
-            {totalItemsInCart > 0 && (
-              <div className="cart-counter">
-                {totalItemsInCart}
-              </div>
-            )}
+              {totalItemsInCart > 0 && (
+                <div className="cart-counter">
+                  {totalItemsInCart}
+                </div>
+              )}
+            </div>
           </Link>
         </div>
       </div>
       <div className="content">
         {children}
       </div>
+    </div>
     </div>
   );
 };

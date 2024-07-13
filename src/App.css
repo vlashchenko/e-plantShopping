@@ -3,7 +3,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  overflow: hidden;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Background for the whole app */
+  overflow-x: hidden;
 }
 
 .landing-page {
@@ -11,6 +16,7 @@
   width: 100vw;
   height: 100vh;
   background-color: #f8f8f8;
+  overflow: hidden; /* Ensure no overflow */
 }
 
 .background-image {
@@ -25,23 +31,18 @@
   background-repeat: no-repeat; /* Avoid repeating the image */
 }
 
-.content {
+.app_content {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100vh;
   width: 100vw;
-  top: 100px;
   backdrop-filter: blur(4px);
   background-color: rgba(0, 0, 0, 0.5);
   gap: 30px;
 }
 
 .landing_content {
-  /* margin-top: 430px;
-  margin-left: 100px;
-  transform: translate(-50%, -50%);
-  z-index: 1; */
   text-align: center;
   width: 400px;
   height: 400px;
@@ -52,17 +53,17 @@
   gap: 10px;
 }
 
-.content p,
-.content h1 {
+.app_content p,
+.app_content h1 {
   color: white;
 }
 
-.content h1 {
+.app_content h1 {
   font-size: 48px;
   margin-bottom: 10px;
 }
 
-.content p {
+.app_content p {
   font-size: 25px;
 }
 
@@ -89,28 +90,8 @@
   background-color: #45a049;
 }
 
-/* ProductList.css */
-
-.product-list-container {
-  position: absolute;
-  overflow-x: hidden;
-  top: 100vh;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
-  transition: top 0.5s ease;
-  overflow-y: auto;
-  z-index: 2;
-  backdrop-filter: blur(5px);
-}
-
-.product-list-container.visible {
-  top: 0;
-}
-
 @media screen and (max-width: 768px) {
-  .content {
+  .app_content {
     flex-direction: column;
     align-items: center;
     width: 100vw;
