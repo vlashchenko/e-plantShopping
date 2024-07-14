@@ -1,3 +1,5 @@
 {
-  "routes": [{ "src": "/(.*)", "dest": "/index.html" }]
+  "routes": [
+    { "src": "/shoppingreact/(.*)", "dest": "/shoppingreact/index.html" }
+  ]
 }
