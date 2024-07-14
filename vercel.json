@@ -1,5 +1,8 @@
 {
-  "routes": [
-    { "src": "/shoppingreact/(.*)", "dest": "/shoppingreact/index.html" }
+  "rewrites": [
+    {
+      "source": "/shoppingreact/(.*)",
+      "destination": "/shoppingreact/index.html"
+    }
   ]
 }
