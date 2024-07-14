@@ -2,6 +2,8 @@ import React from "react";
 import "./Checkout.css";
 
 const Checkout = () => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   return (
     <div className="main-content">
       <div className="checkout-container">
@@ -38,15 +40,15 @@ const Checkout = () => {
           <div className="payment-options">
             <h3>Payment Options:</h3>
             <div className="payment-option">
-              <img src="/shoppingreact/applepay.png" alt="Apple Pay" />
+              <img src={`${baseUrl}applepay.png`} alt="Apple Pay" />
               <p>Apple Pay</p>
             </div>
             <div className="payment-option">
-              <img src="/shoppingreact/googlepay.png" alt="Google Pay" />
+              <img src={`${baseUrl}googlepay.png`} alt="Google Pay" />
               <p>Google Pay</p>
             </div>
             <div className="payment-option">
-              <img src="/shoppingreact/creditcard.png" alt="Credit Card" />
+              <img src={`${baseUrl}creditcard.png`} alt="Credit Card" />
               <p>Credit Card</p>
             </div>
           </div>

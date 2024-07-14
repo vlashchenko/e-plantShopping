@@ -3,16 +3,17 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ProductList from "./ProductList";
 import Cart from "./CartItem";
 import Layout from "./Layout";
-import AppContent from "./AppContent"; // Separate component for the start page
+import AppContent from "./AppContent";
 import "./App.css";
-import Checkout from "./Checkout"; // Import the Checkout component
+import Checkout from "./Checkout";
 
-function App() {
+const App = () => {
+  const basename = import.meta.env.MODE === 'development' ? '' : '/shoppingreact';
+
   return (
-    <Router basename="/shoppingreact">
+    <Router basename={basename}>
       <Routes>
-        <Route path="/" element={<AppContent />} />{" "}
-        {/* Start page without navbar */}
+        <Route path="/" element={<AppContent />} />
         <Route
           path="/products"
           element={
@@ -36,11 +37,10 @@ function App() {
               <Checkout />
             </Layout>
           }
-        />{" "}
-        {/* Checkout page */}
+        />
       </Routes>
     </Router>
   );
-}
+};
 
 export default App;

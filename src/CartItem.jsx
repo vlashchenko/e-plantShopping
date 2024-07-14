@@ -1,11 +1,10 @@
 import React from "react";
-import PropTypes from "prop-types";
 import { useSelector, useDispatch } from "react-redux";
 import { removeItem, updateQuantity } from "./CreatSlice";
 import "./CartItem.css";
 import { useNavigate } from "react-router-dom";
 
-const Cart = ({ onContinueShopping }) => {
+const Cart = () => {
   const cart = useSelector((state) => state.cart.items);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -115,10 +114,6 @@ const Cart = ({ onContinueShopping }) => {
       </div>
     </div>
   );
-};
-
-Cart.propTypes = {
-  onContinueShopping: PropTypes.func.isRequired,
 };
 
 export default Cart;
