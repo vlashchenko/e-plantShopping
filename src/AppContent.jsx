@@ -1,9 +1,10 @@
-
 import { useNavigate } from "react-router-dom";
 import "./App.css";
 import AboutUs from "./AboutUs";
 
 const AppContent = () => {
+  console.log('AppContent component loaded'); // Add this line
+
   const navigate = useNavigate();
 
   const handleGetStartedClick = () => {

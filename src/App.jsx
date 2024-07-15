@@ -7,8 +7,10 @@ import AppContent from "./AppContent";
 import "./App.css";
 import Checkout from "./Checkout";
 
+console.log('App component loaded'); 
+
 const App = () => {
-  const basename = import.meta.env.MODE === 'development' ? '' : '/shoppingreact';
+  const basename = import.meta.env.MODE === 'development' ? '' : '/';
 
   return (
     <Router basename={basename}>

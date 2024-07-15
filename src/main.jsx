@@ -1,11 +1,11 @@
-// e-plantShopping/src/main.jsx
-
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
-import store from './store'; // Adjust the path as necessary
+import store from './store';
 import App from './App';
 import './index.css';
+
+console.log('Main.jsx loaded');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
