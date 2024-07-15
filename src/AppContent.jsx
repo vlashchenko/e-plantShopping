@@ -3,7 +3,7 @@ import "./App.css";
 import AboutUs from "./AboutUs";
 
 const AppContent = () => {
-  console.log('AppContent component loaded'); // Add this line
+  console.log('AppContent component loaded'); 
 
   const navigate = useNavigate();
 
